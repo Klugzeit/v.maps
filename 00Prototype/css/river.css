@@ -1,0 +1,403 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+ font-family: 'Amatic sc', serif;
+}
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+
+#map-container 
+{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+/* <<<<<<<<<<----------------- CHECKBOXES BAR*/
+#filter-bar 
+  {
+    z-index: 1;
+    height: 85px;
+    position: relative;
+    width: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+    border-bottom: 2px;
+    border-bottom-color: rgba(0,0,0,0.3);
+    border-bottom-style: solid;
+  }
+
+li.check-list 
+{
+  display: inline-block;
+  padding: 0 0px 0 0;
+  margin: 10px 0 10px 50px;
+}
+
+/* --- Making some style to the checkbox */
+input.buttons {
+  display: none;
+}
+
+input.buttons + label {
+  height: 65px;
+  width: 65px;
+  display: inline-block;
+  opacity: 0.2;
+}
+
+input.buttons:hover + label {
+  opacity: 0.5;
+}
+
+
+input.buttons:checked + label {
+  opacity: 1;
+}
+
+/*---- Normal CheckBoxes*/
+#join + label {
+  background: url("../assets/icons/icon_join.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#meet + label {
+  background: url("../assets/icons/icon_meet.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#stay + label {
+  background: url("../assets/icons/icon_stay.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#create + label {
+  background: url("../assets/icons/icon_work.png") no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+/*--------------------------------------------------------------*/
+#boxInfo p 
+  {
+    padding: 0px 14px 0px 14px;
+    margin: 5px ;
+  }
+#boxInfo p  strong 
+  {
+  	color: #FA8258;
+  }
+#boxInfo h3 
+  {
+    font-family: 'Amatic sc', serif;
+    padding: 0px 0px 0px 14px;
+    font-size: 2em;
+    color: black;
+  }
+
+#boxInfo 
+  {
+    font-family: 'Open Sans', sans-serif;
+    font-size: .8em;
+    position: relative;
+    z-index: 2;
+    width: 0;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow-x: hidden;
+    padding-top: 10px;
+    transition: 0.5;
+    color: #6E6E6E;
+
+  }
+
+
+.info .closebtn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 40px;
+    margin-left: 65px;
+    text-decoration: none;
+    color: black;
+}
+
+.sliderBox {
+  width: 500px;
+  height: 20px;
+  float: right;
+  margin-top: 0px;
+  margin-right: 50px;
+  padding: 18px
+}
+
+#myTextDiv {
+    color:white;
+    text-align: center;
+    padding: 10px;
+    background: rgba(255, 138, 101, 0.3);
+    width: 15%;
+    margin: auto;
+    position: relative;
+    margin-top: 12%;
+    border-radius: 20px;
+}
+
+
+#addBasket {
+  margin-top: 7%;
+  margin-left: 45px;
+  position: relative;
+  vertical-align: middle;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 50%;
+  height: 30px;
+  cursor: pointer;
+  border: 2px solid rgb(255, 138, 101);
+  -webkit-border-radius: 15px;
+  border-radius: 25px;
+  font: normal 37px/70px "Advent Pro", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  vertical-align:middle;
+  line-height:0;
+  background: rgb(255, 138, 101);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+}
+
+#addBasket:hover {
+  color: rgb(255, 138, 101);
+  background: none;
+}
+
+#addBasket:active {
+  color: rgba(255,255,255,1);
+  background: rgb(255, 138, 101);
+}
+
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    height: 60px;
+    text-align: right;
+    border-top: 2px;
+    border-top-color: rgba(0,0,0,0.3);
+    border-top-style: solid;
+}
+
+#shoppingButton {
+    color: rgb(255, 138, 101);
+    float: right;
+    margin-right: 50px;
+}
+
+#shoppingButton:hover {
+    color: rgba(0,0,0,0.3);
+}
+
+#homeButton {
+    color: rgb(255, 138, 101);
+    display: block;
+    float: left;
+    margin-left: 35px;
+}
+
+#homeButton:hover {
+    color: rgba(0,0,0,0.3);
+}
+
+#userOptions {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  margin-top: 85px;
+  overflow: scroll;
+  margin-bottom: 60px;
+}
+
+#optionBox {
+    width: 75%;
+    height: 520px;
+    background-color: rgb(255, 255, 255, 0.8);
+    color: black;
+    font-family: 'Amatic sc', serif;
+    margin: 0 auto;
+    text-align: left;
+    margin-top: 4%;
+    border-radius: 20px;
+    padding: 10px;
+}
+
+.sliderBase {
+    width: 60%;
+    float:right;
+}
+
+.HostelName {
+    width:25%;
+    float: left;
+    padding-left: 30px;
+}
+
+.boxSlider {
+    height: 62px;
+    margin-top: 30px;
+    padding-right: 80px;
+}
+
+.whiteButton {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  float: right;
+  width: 20%;
+  position: relative;
+  cursor: pointer;
+  padding: 10px 30px;
+  margin-top: 90px;
+  margin-right: 40px;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal normal bold 30px/normal "Amatic sc", Times, serif;
+  color: rgba(255,138,108,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #ffffff;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  padding-right: 20px;
+}
+
+#successBox {
+  display: inline-block;
+  margin-right: 50px;
+  margin-bottom: 15px;
+  padding-top: 20px;
+  position: relative;
+  vertical-align: middle;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  width: 30%;
+  height: 25px;
+  cursor: pointer;
+  border: 2px solid rgb(255, 138, 101); 
+  -webkit-border-radius: 15px;
+  border-radius: 25px;
+  font: normal 37px/70px "Amatic sc", Helvetica, sans-serif;
+  color: rgba(255,255,255,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  letter-spacing: 1px;
+  vertical-align:middle;
+  line-height:0;
+  background: rgb(255, 138, 101);
+  -webkit-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -moz-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  -o-transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+  transition: background-color 0.3s cubic-bezier(0, 0, 0, 0), color 0.3s cubic-bezier(0, 0, 0, 0), width 0.3s cubic-bezier(0, 0, 0, 0), border-width 0.3s cubic-bezier(0, 0, 0, 0), border-color 0.3s cubic-bezier(0, 0, 0, 0);
+
+}
+
+.whiteButtonTut {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  float: right;
+  width: 5%;
+  position: relative;
+  cursor: pointer;
+  padding: 10px 20px;
+  border: 1px solid #ffffff;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  font: normal normal bold 16px/normal "Amatic sc", Times, serif;
+  color: rgba(255,138,108,1);
+  text-align: center;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #ffffff;
+  -webkit-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  -o-transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  transition: all 300ms cubic-bezier(0.42, 0, 0.58, 1);
+  padding-right: 20px;
+}
+
+.tutorialBox {
+    color:white;
+    text-align: left;
+    padding: 10px;
+    background: rgba(255, 138, 101, 0.6);
+    font: normal 20px "Amatic sc", Helvetica, sans-serif;
+    width: 30%;
+    position: relative;
+    border-radius: 20px;
+    height: 22%;
+    font-weight: bold;
+}
+
+#tutorialBox1 {
+    margin: 1% 0px 0px 5%;
+
+}
+
+#tutorialBox2 {
+    float: right;
+    margin: 1% 10% 0px 0px;
+
+}
+
+#tutorialBox3 {
+    margin:auto;
+    margin-top: 10%;
+}
+
+#tutorialBox4 {
+    float: right;
+    margin: 17% 3% 0px 0px;
+}
+
+#nextButton4 {
+    width: 40%;
+}
+
+#endButton1 {
+    margin-left: 4px;
+}

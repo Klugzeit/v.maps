@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <title>The River Map </title>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="../css/map.css"/>
+    <link type="text/css" href="../bootStrap/css/bootstrap.min.css" rel="stylesheet">
+    <link type="text/css" href="../bootStrap/css/bootstrap-theme.min.css" rel="stylesheet" > 
+
+    <link rel="stylesheet" href="css/ion.rangeSlider.css" />
+    <link rel="stylesheet" href="css/ion.rangeSlider.skinNice.css" />
+    <link rel="stylesheet" href="../css/google-amatic-sc.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	  <link href="../css/google-san.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+
+      <div  class= "container-fluid">
+        <div class= "row">
+
+
+              <div class="col-lg-4 col-xs-12">
+                <div class="sidenav">
+                  <a style="margin-top: -10px; text-decoration: none;"   href="../index.html">Home</a>
+                  <a style="text-decoration: none;" href="map.html">Map</a>
+                  <a style="text-decoration: none;" href="../media.html">Media</a>
+                </div>
+              </div>
+
+              <div class="col-xs-12">
+                      <div class="menu-toggle">
+                        <span onclick="toggleNav()">&#9776;</span>
+                      </div>
+
+
+              </div>
+
+              <div style="margin-top: 0px;" class="col-lg-6 col-md-7 col-sm-12 col-xs-12">
+                  <ul id="filter-bar">
+                  <!-- Stay Button -->
+                    <li id="stayhover" class="check-list">
+                      <input type="checkbox" name="check-buttons" id="stay" value="stay" class="buttons">
+                      <label for="stay"></label>
+                    </li>
+
+                  <!-- Meet Button -->
+                    <li id="meethover" class="check-list">
+                      <input type="checkbox" name="check-buttons" id="meet" value="meet" class="buttons">
+                      <label for="meet"></label>
+                    </li>
+
+                  <!-- Create Button -->
+                    <li id="createhover" class="check-list">
+                      <input type="checkbox" name="check-buttons" id="create" value="create" class="buttons">
+                      <label for="create"></label>
+                    </li>
+
+                  <!-- Join Button -->
+                    <li id="joinhover" class="check-list">
+                      <input type="checkbox" name="check-buttons" id="join" value="join" class="buttons" value="Join">
+                      <label for="join"></label>
+                    </li>
+                  </ul>
+              </div>
+ 
+             <div class="col-lg-6 col-md-5 col-sm-12 col-xs-12">
+                <div class="sliderBox">
+                  <input type="text" id="slider" value="" name="slider" />
+                </div>
+             </div>
+
+        </div>
+      </div>
+
+             
+
+      <div style="margin-bottom: 10px;  " class="container-fluid">
+        <div class="row">
+
+          <div class="col-md-8 col-xs-12 col-md-offset-2">
+            <div  class="tutorialBox" id="tutorialBox1">
+              Welcome to TheRiver! The first step is to choose the categories that you are interested in for your trip: Create, Stay, Join, Meet Just click on the markers over each community!
+              <input class="whiteButtonTut" id="endButton1" type="button"  value="End" />
+              <input class="whiteButtonTut" id="nextButton1" type="button"  value="Next" />
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xs-12 col-md-offset-3">
+            <div class="tutorialBox" id="tutorialBox2">
+                Next, you can choose in which months you want to take your backpack and see the world.<br>
+                Use our slider located at the top right corner of the site!
+               <input class="whiteButtonTut" id="nextButton2" type="button"  value="Next" />
+            </div>
+          </div>
+
+          <div class="col-md-6 col-xs-12 col-md-offset-3">
+            <div class="tutorialBox" id="tutorialBox3">
+                Click on the markers to select where you want to go. A new window will open with information about the community. If you like it, you can add it to your backpack.  <br>
+                Remember to choose only three communities for your pilgrimage!
+               <input class="whiteButtonTut" id="nextButton3" type="button" value="Next" />
+            </div>
+          </div>
+
+
+          <div class="col-md-6 col-xs-12 col-md-offset-3">
+              <div class="tutorialBox" id="tutorialBox4">
+                  Open your backpack to see the possible dates in which you can visit the communities. <br>
+                  You can also delete your choices and start again!<br><br>
+                 <input class="whiteButtonTut" id="nextButton4" type="button" value="End Tutorial" />
+              </div>
+          </div>
+
+
+          
+        </div>
+      </div>
+
+
+      <div id="map-container"></div>
+         
+
+
+
+      <div id="boxInfo" class="info">
+        <a href="javascript:void(0)" id="close" class="closebtn" onclick="closeNav()">&times;</a>
+        <span id="information"></span>
+        <input style="width: 80%; margin-left: 10%;" id="addBasket" type="button" name="button1" value="+" />
+      </div>      
+
+
+
+
+
+  
+ 
+     
+
+
+
+    
+    <div class="footer">
+        <ul class="filter-bar">
+          <div class="container-fluid">
+            <div class="row">
+
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <a  href="../index.html"><i id="homeButton" class="fa fa-home fa-3x"></i></a>
+              </div>
+
+
+              <div class="col-lg-4 col-md-4 col-xs-12">
+                <li id="successBox">Community Successfully Added</li>
+              </div>
+            
+
+              <div  class="col-lg-4 col-md-4 col-xs12">
+                <i id="shoppingButton" class="fa fa-plane fa-3x"></i>
+              </div>
+          
+            </div>
+          </div>
+        </ul>
+    </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript"  src="../bootStrap/js/bootstrap.min.js"></script>
+  <script type="text/javascript"  src="../scripts/controllers.js"></script>
+  <script src="js/river.js"></script>
+  <script src="js/ion.rangeSlider.js"></script>
+  <script src="js/moment.js"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzDgXvTkp5Y4LQWuzkCZhdM2fRQJAo7ak&callback=initMap">
+  </script>
+
+</body>
+
+</html>
